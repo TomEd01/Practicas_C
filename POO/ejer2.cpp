@@ -3,6 +3,7 @@ using namespace std;
 class Triangulo{
 private:
     float base, altura;
+
 public:
     Triangulo() {}
     Triangulo(float b, float a){
@@ -15,8 +16,14 @@ public:
 };
 int main(){
     float b, a;
-    cin >> b >> a;
-    Triangulo tr(b, a);
-    cout << "El area es: " << tr.getArea() << '\n';
+    int i;
+    Triangulo *tr = new Triangulo[3];
+    for (i = 0; i < 3; i++){
+        cin >> b >> a;
+        tr[i] = Triangulo(b, a);
+    }
+    for (i = 0; i < 3; i++){
+        cout << "Area del triangulo: " << (i + 1) << ": " << tr[i].getArea() << '\n';
+    }
     return 0;
 }
