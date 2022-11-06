@@ -22,5 +22,11 @@ int main(){
     int suma=0;
     for(unsigned i=0;i<dq.size();i++) suma+=dq[i];
     double avg= suma/dq.size();
-    cout<<"El promedio de los elementos es: "<<avg<<"\n"; //28
+    cout<<"El promedio de los elementos es: "<<avg<<"\n\n";
+
+    //Agrega elementos al final de dq.
+    dq.push_back(100);
+    dq.push_back(136);
+    muestra("dq tras incluir elementos al final: ",dq);
+
 }
