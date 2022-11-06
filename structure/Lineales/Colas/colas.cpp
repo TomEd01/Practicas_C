@@ -15,5 +15,12 @@ int main(){
     Tómese nota de que el número de elementos en deque
     se obtiene al llamar size()*/
     for(unsigned i=0;i<dq.size();i++) dq[i]=i*i;
-    muestra("El contenido de dq: ",dq); //0 1 4 9 16 25 36 49 64 81
+    muestra("El contenido de dq: ",dq);
+    
+    /*Calcula el promedio de los valores. Una vez más,
+    observe el uso del operador subíndice*/
+    int suma=0;
+    for(unsigned i=0;i<dq.size();i++) suma+=dq[i];
+    double avg= suma/dq.size();
+    cout<<"El promedio de los elementos es: "<<avg<<"\n"; //28
 }
