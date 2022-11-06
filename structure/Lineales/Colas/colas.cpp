@@ -27,9 +27,13 @@ int main(){
     //Agrega elementos al final de dq.
     dq.push_back(100);
     dq.push_back(136);
-    muestra("dq tras incluir elementos al final: ",dq); //0 1 4 9 16 25 36 49 64 81 100 136
+    muestra("dq tras incluir elementos al final: ",dq);
 
     //Ahora usa pop_back() para eliminar un elemento de dq como dq.pop_back()
     dq.pop_back();
-    muestra("dq tras usar back-pop con un elemento: ",dq); //0 1 4 9 16 25 36 49 64 81 100 
+    muestra("dq tras usar back-pop con un elemento: ",dq);
+    cout<<endl;
+
+    cout<<"El primero y ultimo elemento de dq como lo indican begin()  y rend()-1:\n"<<*dq.begin()<<","<<*(dq.rend()-1)<<"\n"; //0, 100
+    cout<<"El primero y ultimo elemento de dq como lo indican rbegin()  y rend()-1:\n"<<*dq.rbegin()<<","<<*(dq.rend()-1)<<"\n\n"; //100, 0
 }
