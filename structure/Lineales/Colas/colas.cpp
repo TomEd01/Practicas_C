@@ -43,10 +43,10 @@ int main(){
     deque<int>::reverse_iterator ritr;
     // Recorre en ciclo dq en dirección directa usando un iterador. 
     cout << "Se aplica un bucle al vector en direcci\u00a2n directa:\n"; 
-    for(itr = dq.begin(); itr != dq.end(); ++itr) cout << *itr << " "; 
+    for(itr = dq.begin(); itr != dq.end(); ++itr) cout << *itr << " ";  //0 1 4 9 16 25 36 49 64 81 100
     cout << "\n\n"; 
     cout << "Ahora, se usa un iterador inverso para aplicar un bucle en direcci\u00a2n inversa:\n"; 
     // Recorre dq en ciclo en dirección inversa uilizando un iterador inverso. 
-    for(ritr = dq.rbegin(); ritr != dq.rend(); ++ritr) cout << *ritr << " "; 
+    for(ritr = dq.rbegin(); ritr != dq.rend(); ++ritr) cout << *ritr << " ";  // 100 81 64 49 36 25 16 9 4 1 0
     cout << "\n\n";
 }
