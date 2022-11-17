@@ -34,6 +34,19 @@ int main(){
     muestra("dq tras usar back-pop con un elemento: ",dq);
     cout<<endl;
 
-    cout<<"El primero y ultimo elemento de dq como lo indican begin()  y rend()-1:\n"<<*dq.begin()<<","<<*(dq.rend()-1)<<"\n"; //0, 100
-    cout<<"El primero y ultimo elemento de dq como lo indican rbegin()  y rend()-1:\n"<<*dq.rbegin()<<","<<*(dq.rend()-1)<<"\n\n"; //100, 0
+    cout<<"El primero y ultimo elemento de dq como lo indican begin()  y rend()-1:\n"<<*dq.begin()<<","<<*(dq.rend()-1)<<"\n";
+    cout<<"El primero y ultimo elemento de dq como lo indican rbegin()  y rend()-1:\n"<<*dq.rbegin()<<","<<*(dq.rend()-1)<<"\n\n";
+
+    //Declara un iterador a una deque<int>
+    deque<int>::iterator itr;
+    // Ahora, declara un iterador inverso a una deque<int>
+    deque<int>::reverse_iterator ritr;
+    // Recorre en ciclo dq en dirección directa usando un iterador. 
+    cout << "Se aplica un bucle al vector en direcci\u00a2n directa:\n"; 
+    for(itr = dq.begin(); itr != dq.end(); ++itr) cout << *itr << " "; 
+    cout << "\n\n"; 
+    cout << "Ahora, se usa un iterador inverso para aplicar un bucle en direcci\u00a2n inversa:\n"; 
+    // Recorre dq en ciclo en dirección inversa uilizando un iterador inverso. 
+    for(ritr = dq.rbegin(); ritr != dq.rend(); ++ritr) cout << *ritr << " "; 
+    cout << "\n\n";
 }
