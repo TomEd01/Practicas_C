@@ -43,10 +43,20 @@ int main(){
     deque<int>::reverse_iterator ritr;
     // Recorre en ciclo dq en dirección directa usando un iterador. 
     cout << "Se aplica un bucle al vector en direcci\u00a2n directa:\n"; 
-    for(itr = dq.begin(); itr != dq.end(); ++itr) cout << *itr << " ";  //0 1 4 9 16 25 36 49 64 81 100
+    for(itr = dq.begin(); itr != dq.end(); ++itr) cout << *itr << " ";
     cout << "\n\n"; 
     cout << "Ahora, se usa un iterador inverso para aplicar un bucle en direcci\u00a2n inversa:\n"; 
     // Recorre dq en ciclo en dirección inversa uilizando un iterador inverso. 
-    for(ritr = dq.rbegin(); ritr != dq.rend(); ++ritr) cout << *ritr << " ";  // 100 81 64 49 36 25 16 9 4 1 0
+    for(ritr = dq.rbegin(); ritr != dq.rend(); ++ritr) cout << *ritr << " ";
     cout << "\n\n";
+    //Crea otra deque(cola) que contiene subrango de dq.
+    deque<int> dq2(dq.begin()+2,dq.end()-4);
+    //Despriega contenido de dq2 empleando iterador
+    muestra("dq contiene un subrango de dq: ",dq2);
+    //Cambia los valores de algunos elementos de dq2
+    dq2[1]=100;
+    dq2[2]=88;
+    dq2[4]=99;
+    muestra("Tras las asignaciones, dq2 ahora contiene: ",dq2);
+    
 }
