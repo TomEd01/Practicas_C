@@ -52,16 +52,20 @@ int main(){
     //Crea otra deque(cola) que contiene subrango de dq.
     deque<int> dq2(dq.begin()+2,dq.end()-4);
     //Despriega contenido de dq2 empleando iterador
-    muestra("dq contiene un subrango de dq: ",dq2); //4 9 16 25 36
+    muestra("dq contiene un subrango de dq: ",dq2);
     //Cambia los valores de algunos elementos de dq2
     dq2[1]=100;
     dq2[2]=88;
     dq2[4]=99;
-    muestra("Tras las asignaciones, dq2 ahora contiene: ",dq2); //4 100 88 25 99
+    muestra("Tras las asignaciones, dq2 ahora contiene: ",dq2);
     /*Crea una deque vacía y luego le asigna una
       secuencia que es la inversa de dq.*/
     deque<int> dq3; 
     dq3.assign(dq.rbegin(), dq.rend()); 
-    muestra("dq3 contiene la inversa de dq: ", dq3); //100 81 64 49 36 25 16 9 4 1 0
-    cout << endl; 
+    muestra("dq3 contiene la inversa de dq: ", dq3);
+    cout << endl;
+    // Incluye un elemento al frente de dq. 
+    dq.push_front(-31416); 
+    muestra("dq tras usar push_front(): ", dq); //-31416 0 1 4 9 16 25 36 49 64 81 100
+    cout <<endl;
 }
