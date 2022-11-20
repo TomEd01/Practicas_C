@@ -66,6 +66,14 @@ int main(){
     cout << endl;
     // Incluye un elemento al frente de dq. 
     dq.push_front(-31416); 
-    muestra("dq tras usar push_front(): ", dq); //-31416 0 1 4 9 16 25 36 49 64 81 100
+    muestra("dq tras usar push_front(): ", dq);
     cout <<endl;
+    // Ahora, limpia dq al eliminar elementos de uno en uno. 
+    cout << "Al eliminar elementos al frente de dq.\n"; 
+    while(dq.size() > 0) { 
+        cout << "Eliminando: " << dq.front() << endl; 
+        dq.pop_front(); 
+    } 
+    if(dq.empty()) cout << "Ahora dq esta vacia.\n"; 
+    return 0; 
 }
